@@ -22,3 +22,15 @@ db2 = MySQLDatabase(host='localhost', user='user2', password='password2', databa
 
 # You can now use db1 and db2 independently to interact with their respective databases.
 ```
+
+```python
+DB_CONFIG = {
+    'host': os.getenv('DB_HOST'),
+    'user': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASS'),
+    'database': os.getenv('DB_NAME'),
+    'port': os.getenv('DB_PORT'),
+    'ssl_ca': os.getenv('DB_CA_CERT')
+}
+db1 = MySQLDatabas(**DB_CONFIG)
+```
